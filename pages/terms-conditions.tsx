@@ -3,7 +3,7 @@ const TermsAndConditions = () => {
     <>
       <div>
         <div className="text-lg font-bold text-blue-500">
-          TermsAndConditions
+          Terms And Conditions
         </div>
       </div>
     </>
