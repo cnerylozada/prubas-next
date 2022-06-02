@@ -11,6 +11,9 @@ export const Header = () => {
       <Link href="/about">
         <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">About</a>
       </Link>
+      <Link href="/random">
+        <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">Random</a>
+      </Link>
       <a
         href="/terms-conditions"
         target="_blank"

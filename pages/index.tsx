@@ -12,6 +12,25 @@ const Home = () => {
 
       <div className="space-y-10">
         <div className="text-lg font-bold text-blue-500">Home page</div>
+        <div>
+          <p>Notes</p>
+          <ul className="list-inside list-disc">
+            <li>
+              En el header hay <span className="font-bold">Links</span> para
+              About and Random, Next.js{" "}
+              <span className="font-bold">auto prefetches su codigo</span>{" "}
+              (comprobar en el inspector) en{" "}
+              <span className="font-bold">build</span>
+            </li>
+            <li>
+              Politics es enrutado por useRouter, por eso{" "}
+              <span className="font-bold">no es prefetched</span> en build y
+              tmpoco se accede por{" "}
+              <span className="font-bold">abrir pestania nueva</span>
+            </li>
+            <li>By default, Next.js pre-renders every page.</li>
+          </ul>
+        </div>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((_) => (
           <div key={_} className="grid grid-cols-2 gap-4 h-[500px]">
             <div className="bg-gray-200"></div>
