@@ -8,14 +8,10 @@ export async function getStaticProps() {
   };
 }
 const About = ({ staff }: { staff: any }) => {
-  // const [staff, setStaff] = useState<any>();
-  // useEffect(() => {
-  //   getStaff().then((_) => setStaff(_));
-  // }, []);
   return (
     <>
       <div className="space-y-10">
-        <div className="text-lg font-bold text-blue-500">About</div>
+        <div className="text-lg font-bold text-blue-500">getStaticProps</div>
         <div>
           <p>Notes</p>
           <ul className="list-inside list-disc">
@@ -38,6 +34,13 @@ const About = ({ staff }: { staff: any }) => {
             <li>
               No se vuelve a consultar el servicio y siempre se muestra la misma
               data cada vez q entramos en esta pagina
+            </li>
+            <li>Cada usuario vera la misma data siempre por cada build</li>
+            <li>
+              In production, getStaticProps runs at build time. However, this
+              behavior can be enhanced using the{" "}
+              <span className="font-bold">fallback key</span> returned by
+              getStaticPaths
             </li>
           </ul>
         </div>

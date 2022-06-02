@@ -9,16 +9,24 @@ const Random = () => {
 
   return (
     <div className="space-y-10">
-      <div className="text-lg font-bold text-blue-500">Random</div>
+      <div className="text-lg font-bold text-blue-500">
+        Client-side Rendering useEffect
+      </div>
       <div>
         <p>Notes</p>
         <ul className="list-inside list-disc">
           <li>
-            El View page source muestra un html con data statica sin la data
-            retornada del servicio a llamado
+            Statically generate (pre-render) parts of the page that do not
+            require external data. (ver view page source)
           </li>
           <li>En Fetch/XHR se carga el servicio</li>
           <li>El servicio se llama cada vez q se accede a la pagina</li>
+          <li>Cada usuario podra ver data diferente con llamada a la pagina</li>
+          <li>
+            The team behind Next.js has created a React hook for data fetching
+            called SWR. We highly recommend it if you’re{" "}
+            <span className="font-bold">fetching data on the client side.</span>
+          </li>
         </ul>
       </div>
       <div>
