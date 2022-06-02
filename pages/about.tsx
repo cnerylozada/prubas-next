@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getStaff } from "../services/staff";
 
 const About = () => {
-  const [staff, setStaff] = useState();
+  const [staff, setStaff] = useState<any>();
   useEffect(() => {
     getStaff().then((_) => setStaff(_));
   }, []);
