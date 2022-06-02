@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 
 const Home = () => {
@@ -9,8 +10,36 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      <div className="space-y-10">
         <div className="text-lg font-bold text-blue-500">Home page</div>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((_) => (
+          <div key={_} className="grid grid-cols-2 gap-4 h-[500px]">
+            <div className="bg-gray-200"></div>
+            <div className="bg-gray-200"></div>
+          </div>
+        ))}
+
+        <div className="text-lg font-bold text-blue-500">Art Gallery</div>
+        <div className="space-y-5">
+          <img
+            src="/images/art-background.png"
+            loading="lazy"
+            alt="art"
+            className="h-64 w-64 object-cover"
+          />
+          <img
+            src="/images/lifestyle-background.png"
+            loading="lazy"
+            alt="lifestyle"
+            className="h-64 w-64 object-cover"
+          />
+          <img
+            src="/images/photography-background.png"
+            loading="lazy"
+            alt="photography"
+            className="h-64 w-64 object-cover"
+          />
+        </div>
       </div>
     </>
   );
