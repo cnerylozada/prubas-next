@@ -17,7 +17,8 @@ const Random = () => {
             El View page source muestra un html con data statica sin la data
             retornada del servicio a llamado
           </li>
-          <li>En Fetch/XHR se carga se invoca el servicio</li>
+          <li>En Fetch/XHR se carga el servicio</li>
+          <li>El servicio se llama cada vez q se accede a la pagina</li>
         </ul>
       </div>
       <div>

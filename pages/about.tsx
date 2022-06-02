@@ -34,7 +34,11 @@ const About = ({ staff }: { staff: any }) => {
               El View page source muestra un html con la data statica y con la
               data retornada del servicio llamado
             </li>
-            <li>En Fetch/XHR se carga el .json</li>
+            <li>En Fetch/XHR se carga solo el .json</li>
+            <li>
+              No se vuelve a consultar el servicio y siempre se muestra la misma
+              data cada vez q entramos en esta pagina
+            </li>
           </ul>
         </div>
         <div>
