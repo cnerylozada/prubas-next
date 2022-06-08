@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { getStaff } from "../services/staff";
 
 export async function getStaticProps() {
@@ -23,8 +22,12 @@ const About = ({ staff }: { staff: any }) => {
             <li>
               getStaticProps page: el json de la data cargada se genera al
               <span className="font-bold">inicio de la app</span> (ver
-              inspector), es por eso q la data y la pagina se cargan cai de
+              inspector), es por eso q la data y la pagina se cargan casi de
               inmediato cuando entras en ella
+            </li>
+            <li>
+              Note: In development mode, getStaticProps runs on each request
+              instead.
             </li>
             <li>
               El View page source muestra un html con la data statica y con la

@@ -9,7 +9,14 @@ export const Header = () => {
         <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">Home</a>
       </Link>
       <Link href="/about">
-        <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">About</a>
+        <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+          About getStatic
+        </a>
+      </Link>
+      <Link href="/users">
+        <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+          Users getServerSide
+        </a>
       </Link>
       <Link href="/random">
         <a className="py-2 px-4 hover:bg-gray-200 cursor-pointer">Random</a>
