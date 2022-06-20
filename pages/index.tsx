@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import useTranslation from "next-translate/useTranslation";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -11,7 +14,10 @@ const Home = () => {
       </Head>
 
       <div className="space-y-10">
-        <div className="text-lg font-bold text-blue-500">Home page</div>
+        <div className="text-lg font-bold text-blue-500">
+          <p>{t("common:hello")}</p>
+          <p>{t("home:mainTitle")}</p>
+        </div>
         <div>
           <p>Notes</p>
           <ul className="list-inside list-disc">

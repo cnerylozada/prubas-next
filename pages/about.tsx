@@ -1,15 +1,23 @@
+import useTranslation from "next-translate/useTranslation";
 import { getStaff } from "../services/staff";
 
-export async function getStaticProps() {
-  const staff = await getStaff();
-  return {
-    props: { staff },
-  };
-}
-const About = ({ staff }: { staff: any }) => {
+// export async function getStaticProps() {
+//   const staff = await getStaff();
+//   return {
+//     props: { staff },
+//   };
+// }
+// const About = ({ staff }: { staff: any }) => {
+const About = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="space-y-10">
+        <div className="text-lg font-bold text-blue-500">
+          <p>{t("common:hello")}</p>
+          <p>{t("about:mainTitle")}</p>
+        </div>
         <div className="text-lg font-bold text-blue-500">getStaticProps</div>
         <div>
           <p>Notes</p>
@@ -49,9 +57,9 @@ const About = ({ staff }: { staff: any }) => {
         </div>
         <div>
           <div>Data:</div>
-          {!staff && <p>Loading ...</p>}
+          {/* {!staff && <p>Loading ...</p>}
           {!!staff &&
-            staff.map((_: any, index: number) => <p key={index}>{_.name}</p>)}
+            staff.map((_: any, index: number) => <p key={index}>{_.name}</p>)} */}
         </div>
       </div>
     </>
