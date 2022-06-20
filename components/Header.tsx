@@ -34,6 +34,20 @@ export const Header = () => {
       >
         Politics
       </div>
+
+      <div className="flex space-x-4">
+        {router.locales?.map((_) => (
+          <Link key={_} href={router.asPath} locale={_}>
+            <a
+              className={`block font-bold uppercase ${
+                router.locale === _ ? "text-purple-700" : "text-black"
+              }`}
+            >
+              {_}
+            </a>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
